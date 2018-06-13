@@ -56,12 +56,12 @@ module Doorkeeper
             "params."
         end
 
-        if opts[:application][:secret].nil?
+        if opts[:application].secret.nil?
           fail "JWT `use_application_secret` is enabled but the application " \
             "secret is nil."
         end
 
-        opts[:application][:secret]
+        opts[:application].secret
       end
 
       def rsa_encryption?
